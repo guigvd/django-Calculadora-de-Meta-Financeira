@@ -28,12 +28,14 @@ Apresentação dos Resultados:
 ● A aplicação exibirá o tempo estimado para atingir a meta financeira com
 base nas informações fornecidas pelos usuários.
 
-## Você pode testar o app aqui:
+
+## Você pode testar o app aqui
 https://django-calculadora-de-meta-financeira.vercel.app/
 
-![image](https://github.com/guigvd/django-Calculadora-de-Meta-Financeira/assets/100156111/75160a2c-e278-4f8d-845d-abecfa59dc2d)
 
+## Demonstração
 
+https://github.com/guigvd/django-Calculadora-de-Meta-Financeira/assets/100156111/fb2fba82-50e0-4510-ada7-0992d0a29c05
 
 
 ## Running Locally
