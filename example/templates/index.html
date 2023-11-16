@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- CSS -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: rgb(96, 76, 175);
+            color: #fff;
+            padding: 10px 15px;
+            margin-bottom: 14px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: rgb(69, 52, 133);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Calculadora de Meta Financeira</h1>
+
+    <form method="POST">
+        {% csrf_token %}
+        
+        <label for="meta">Meta Financeira:</label>
+        <input type="text" id="meta" name="meta" value="{{ request.POST.meta }}" required>
+        
+        <br>
+        
+        <label for="economia">Economia Mensal:</label>
+        <input type="text" id="economia" name="economia" value="{{ request.POST.economia }}" required>
+        
+        <br>
+        
+        <button type="submit">Enviar</button>
+
+        <!-- resultado -->
+        {% if resultado %}
+        <label for="resultado">Resultado:</label>
+        <input type="text" id="resultado" name="resultado" value="{{ resultado }}" disabled>
+        {% endif %}
+        
+        
+    </form>
+</body>
+
+</html>
